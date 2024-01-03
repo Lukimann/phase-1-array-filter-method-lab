@@ -1,8 +1,8 @@
-const drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
+let drivers = ['Bobby', 'Sammy', 'Sally', 'Annette', 'Sarah', 'Bobby']
 
-function findMatching(name) {
-    return drivers.filter(driver => driver === name);
-    //driver is a temporary variable that reps each element of the driver.
+function findMatching (drivers, name) {
+    let sameDriver = drivers.filter((findHere) => {
+        return findHere.toLowerCase() === name.toLowerCase()
+    })
+    return sameDriver
 }
-let filterDrivers = findMatching('Bobby');
-console.log(filterDrivers);
