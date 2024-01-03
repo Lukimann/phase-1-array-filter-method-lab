@@ -7,6 +7,14 @@ function findMatching(drivers, name) {
   return sameDriver;
 }
 
+function fuzzyMatch (drivers, name) {
+  let members = drivers.filter((fuzzy) => {
+    return fuzzy.slice(0, name.length) === name;
+  })
+  return members
+}
+const outCome = fuzzyMatch('Sa')
+console.log(result)
 
 const drivers = [
     {
